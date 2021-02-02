@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hello</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #000;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        h1{
+            margin: auto;
+            color: #fff;
+            font-family: sans-serif;
+            font-size: clamp(24px, 10vw, 100px);
+        }
+        body.active{
+            background-color: #fff;
+        }
+        body.active h1{
+            color: #000;
+        }
+    </style>
+    <h1>ПРИВЕТ ЭПИЛЕПТИКИ</h1>
+    <script>
+        let b = document.body;
+        let i = 0;
+        function loop(){
+            if (!(i % 4)) b.classList.toggle('active')
+            i++;
+            requestAnimationFrame(loop)
+        }
+        loop();
+
+    </script>
+</body>
+</html>
