@@ -34,15 +34,11 @@
     </style>
     <h1>ПРИВЕТ ЭПИЛЕПТИКИ</h1>
     <script>
-        let b = document.body;
         let i = 0;
-        function loop(){
-            if (!(i % 4)) b.classList.toggle('active')
-            i++;
+        (function loop(){
+            if (!(i++ % 4)) document.body;.classList.toggle('active')
             requestAnimationFrame(loop)
-        }
-        loop();
-
+        })()
     </script>
 </body>
 </html>
