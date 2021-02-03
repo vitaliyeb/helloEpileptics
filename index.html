@@ -23,6 +23,7 @@
             margin: auto;
             color: #fff;
             font-family: sans-serif;
+            teaxt-align: center;
             font-size: clamp(24px, 10vw, 100px);
         }
         body.active{
@@ -36,7 +37,7 @@
     <script>
         let i = 0;
         (function loop(){
-            if (!(i++ % 4)) document.body;.classList.toggle('active')
+            if (!(i++ % 4)) document.body.classList.toggle('active');
             requestAnimationFrame(loop)
         })()
     </script>
